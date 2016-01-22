@@ -12,6 +12,7 @@ public class MapActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_map);
 
+        changeFragment(Map.newInstance("", ""));
     }
 
     private void changeFragment(Fragment fragment) {

@@ -65,7 +65,7 @@ public class Map extends Fragment {
 
         MapView mapView = (MapView) view.findViewById(R.id.map_view);
 
-        mapView.setAccessToken("");
+        mapView.setAccessToken(BuildConfig.MAPBOX_ACCESS_TOKEN);
 
         mapView.setStyleUrl(Style.MAPBOX_STREETS);
         mapView.onCreate(savedInstanceState);

@@ -1,5 +1,6 @@
 package fr.louisbl.hellomap;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -28,5 +29,9 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.Home
     @Override
     public void onButtonMapClick() {
         Log.d(TAG, "on button clicked");
+
+        Intent intent = new Intent(this, MapActivity.class);
+
+        startActivity(intent);
     }
 }

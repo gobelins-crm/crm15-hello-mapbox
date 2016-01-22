@@ -10,11 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fr.louisbl.hellomap.MapActivity">
 
-    <LinearLayout
-        android:id="@+id/map_container"
+    <fragment
+        android:id="@+id/fragment_map"
+        android:name="fr.louisbl.hellomap.Map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-    </LinearLayout>
+        tools:layout="@layout/fragment_map"/>
 
 </RelativeLayout>

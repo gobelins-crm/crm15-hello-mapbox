@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mapbox.mapboxsdk.constants.Style;
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.views.MapView;
 
 
@@ -25,6 +26,7 @@ public class Map extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private MapView mapView;
 
 
     public Map() {
@@ -63,13 +65,54 @@ public class Map extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
-        MapView mapView = (MapView) view.findViewById(R.id.map_view);
+        mapView = (MapView) view.findViewById(R.id.map_view);
 
         mapView.setAccessToken(BuildConfig.MAPBOX_ACCESS_TOKEN);
 
         mapView.setStyleUrl(Style.MAPBOX_STREETS);
+
+        mapView.setLatLng(new LatLng(46.6756,4.3727));
+        mapView.setZoom(15);
+
+
         mapView.onCreate(savedInstanceState);
 
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
     }
 }

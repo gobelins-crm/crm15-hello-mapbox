@@ -15,11 +15,11 @@ import android.widget.Button;
  * {@link HomeFragmentListener} interface
  * to handle interaction events.
  */
-public class HomeFragment extends Fragment implements View.OnClickListener {
+public class Home extends Fragment implements View.OnClickListener {
 
     private HomeFragmentListener mListener;
 
-    public HomeFragment() {
+    public Home() {
         // Required empty public constructor
     }
 

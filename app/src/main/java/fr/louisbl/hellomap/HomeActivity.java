@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-public class HomeActivity extends AppCompatActivity implements HomeFragment.HomeFragmentListener {
+public class HomeActivity extends AppCompatActivity implements Home.HomeFragmentListener {
 
     private static final String TAG = "HomeActivity";
 
@@ -16,7 +16,7 @@ public class HomeActivity extends AppCompatActivity implements HomeFragment.Home
 
         setContentView(R.layout.activity_home);
 
-        changeFragment(new HomeFragment());
+        changeFragment(new Home());
     }
 
     private void changeFragment(Fragment fragment) {
